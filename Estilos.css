@@ -1,185 +1,4 @@
-/* Configuración General y Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background-color: #f0f2f5; /* Fondo más suave y moderno */
-    color: #333; /* Color de texto más legible */
-}
-
-/* Contenedor principal para centrar el contenido */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* --- Encabezado y Navegación --- */
-header {
-    background: #ff527b; /* Rosa vibrante */
-    color: white;
-    padding: 20px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.profile-pic {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid white; /* Borde blanco para contraste */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Sombra luminosa */
-    transition: all 0.3s ease-in-out;
-}
-
-.profile-pic:hover {
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.6);
-    transform: scale(1.1);
-}
-
-h1 {
-    margin: 0;
-    color: white;
-    font-size: 1.8em;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav li {
-    margin-left: 20px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #f7b4c9; /* Rosa más claro al pasar el mouse */
-}
-
-/* --- Contenido Principal y Sidebar --- */
-main {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 30px;
-    margin: 30px 0;
-}
-
-article {
-    background: white;
-    margin-bottom: 30px;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-article:hover {
-    transform: translateY(-5px); /* Efecto "elevado" */
-}
-
-.article-meta {
-    color: #888;
-    font-size: 0.9em;
-    margin: 10px 0;
-}
-
-/* Sidebar */
-aside {
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-aside h2 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #ff527b; /* Línea de acento */
-    padding-bottom: 5px;
-}
-
-aside ul {
-    list-style: none;
-    margin-bottom: 20px;
-}
-
-aside li {
-    margin-bottom: 10px;
-}
-
-aside a {
-    color: #555;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-aside a:hover {
-    color: #ff527b;
-}
-
-/* Formulario de Búsqueda */
-.search-form input[type="text"] {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-.search-form button {
-    width: 100%;
-    padding: 12px;
-    background-color: #ff527b;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.search-form button:hover {
-    background-color: #d13d61;
-}
-
-/* Footer */
-footer {
-    background: #444; /* Gris oscuro para un contraste elegante */
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-
-/* Reset */
+/* ==== Reset y Configuración General ==== */
 * {
   margin: 0;
   padding: 0;
@@ -187,8 +6,11 @@ footer {
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
+  background-color: #f0f2f5;
+  color: #333;
+  font-size: 16px;
 }
 
 .container {
@@ -197,24 +19,45 @@ body {
   padding: 0 20px;
 }
 
+/* ==== Encabezado y Navegación ==== */
 header {
-  background: #d69cdb;
+  background: #ff527b;
   color: white;
-  padding: 1rem 0;
+  padding: 20px 0;
 }
 
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* importante para móviles */
+  flex-wrap: wrap; /* Para que no se desborde en pantallas pequeñas */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .profile-pic {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  margin-left: 15px;
+  object-fit: cover;
+  border: 3px solid white;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.6);
+  transform: scale(1.1);
+}
+
+h1 {
+  margin: 0;
+  color: white;
+  font-size: 1.8em;
 }
 
 nav ul {
@@ -224,15 +67,21 @@ nav ul {
 }
 
 nav li {
-  margin-left: 15px;
+  margin-left: 20px;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
+nav a:hover {
+  color: #f7b4c9;
+}
+
+/* ==== Contenido Principal ==== */
 main {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -243,27 +92,91 @@ main {
 article {
   background: white;
   margin-bottom: 30px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+article:hover {
+  transform: translateY(-5px);
 }
 
 .article-meta {
-  color: #666;
+  color: #888;
   font-size: 0.9em;
   margin: 10px 0;
 }
 
+article img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ==== Sidebar ==== */
 aside {
-  background: #f8f9fa;
-  padding: 20px;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-footer {
-  background: #333;
+aside h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ff527b;
+  padding-bottom: 5px;
+}
+
+aside ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+aside li {
+  margin-bottom: 10px;
+}
+
+aside a {
+  color: #555;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+aside a:hover {
+  color: #ff527b;
+}
+
+/* ==== Formularios ==== */
+.search-form input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.search-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff527b;
   color: white;
-  text-align: center;
-  padding: 20px 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
+.search-form button:hover {
+  background-color: #d13d61;
+}
+
+/* ==== Tags ==== */
 .tags {
   margin: 10px 0;
 }
@@ -277,14 +190,42 @@ footer {
   border-radius: 5px;
 }
 
-/* --- RESPONSIVO --- */
+/* ==== Footer ==== */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin: 5px 0;
+}
+
+footer ul li a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  color: white;
+}
+
+/* ==== Diseño responsivo ==== */
+
+/* Tablets */
 @media (max-width: 900px) {
   main {
-    grid-template-columns: 1fr; /* artículos y aside uno debajo del otro */
+    grid-template-columns: 1fr;
   }
 
   .header-content {
-    flex-direction: column; /* logo y menú en columna */
+    flex-direction: column;
     align-items: flex-start;
   }
 
@@ -298,8 +239,53 @@ footer {
     margin: 10px 0;
   }
 
-  img {
-    max-width: 100%;
-    height: auto;
+  .container {
+    padding: 0 15px;
+  }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  header {
+    padding: 0.8rem 0;
+  }
+
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .header-content {
+    align-items: center;
+  }
+
+  nav ul {
+    align-items: center;
+  }
+
+  aside {
+    margin-top: 20px;
+  }
+}
+
+/* Extra pequeño */
+@media (max-width: 400px) {
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  .tag {
+    font-size: 0.7em;
+    padding: 2px 5px;
   }
 }
