@@ -216,6 +216,7 @@ footer ul li a:hover {
   color: white;
 }
 
+
 /* ==== Diseño responsivo ==== */
 
 /* Tablets */
@@ -287,5 +288,53 @@ footer ul li a:hover {
   .tag {
     font-size: 0.7em;
     padding: 2px 5px;
+  }
+}
+/* Botón hamburguesa */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Ocultar el checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Estilos normales (pantallas grandes) */
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  /* Mostrar botón hamburguesa */
+  .menu-icon {
+    display: block;
+  }
+
+  /* Ocultar menú por defecto */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #ff527b;
+    padding: 15px;
+    width: 100%;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  /* Mostrar menú cuando el checkbox está activado */
+  #menu-toggle:checked + .menu-icon + nav ul {
+    display: flex;
   }
 }
